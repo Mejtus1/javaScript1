@@ -56,7 +56,32 @@ var quotient1 = 2.5 / 7.5;
 // Remainder (remainder of the division of two numbers)
 var remainder; 
 remainder = 11 % 3;
+
+// ---------------------------------------------------------------------------------- // 
 // Compound Assigement with Augmented Addition 
-VAR H = 3;
+var H = 3;
 H = H + 15; // it is common operation so there is a shortcut 
-H *= 12
+H *= 12;
+// Compound Assigement with Augmented Subtraction
+var G = 12;
+G = G - 6;
+G -= 6;
+// Compound Assigement with Augmented Multiplication 
+var F = 5;
+F = F * 5;
+F *= 5;
+// Compound Assigement with Augmented Division 
+var D = 48;
+D = D / 48; 
+D /= 48;
+
+// ------------------------------------------------------------------------------------ // 
+//Declare String Variables
+var firstName = 'Alan'; //String is a 
+var firstname = "Alan"; //value surrounded by double or single quotation marks 
+
+//Quotes inside quotes
+var myStr = "I am a \"double quoted \"string inside \"double quoted string"
+// placing \ in front of quotes in sentence like this console logs quotes 
+// shows quotation marks without the back slashes
+
