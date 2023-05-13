@@ -128,3 +128,11 @@ var firstName = "Aud";
 FirstNameLength = firstName.length;
 console.log(FirstNameLength);
 
+//Using knowledge of strings FUNCTION EXAMPLE 
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){ // you can call the function 
+var result = "";  
+result += "The " + myAdjective + myNoun + myVerb + "to the store" + myAdverb                                        
+return result; //result will be returned                    // abd you have to pass in ceratin types of wordswe are going to use this words that are passed in  
+}                                                           // to create an sentence 
+console.log(wordBanks("dog", "big,", "ran", "quick")) // here we call the function 
+console.log(wordBanks("bike", "slow", "flew", "slowly"))
