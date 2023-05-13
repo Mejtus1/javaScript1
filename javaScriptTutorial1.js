@@ -1,0 +1,1 @@
+var //global variable, can be used outside of the scope of assigment 
