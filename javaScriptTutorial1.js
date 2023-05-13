@@ -81,7 +81,50 @@ var firstName = 'Alan'; //String is a
 var firstname = "Alan"; //value surrounded by double or single quotation marks 
 
 //Quotes inside quotes
-var myStr = "I am a \"double quoted \"string inside \"double quoted string"
+var myStr = "I am a \"double quoted \"string inside \"double quoted string";
 // placing \ in front of quotes in sentence like this console logs quotes 
 // shows quotation marks without the back slashes
+
+var mystr = 'I am a "double quoted" text or link inside "single quotes"';
+// single quotes 
+var mySTR = `I am a 'single quote' and a "double quote" inside backticks`;
+// backticks = `` 
+
+/* CODE OUTPUT in STRING 
+\' single quote, 
+\" double quote
+\\ backslash
+\n newline
+\r carriage return 
+\t tab
+\b backspace 
+\f form feed 
+*/
+var meinstr = "FirstLine\n\t\\Secondline\nThirdline";
+// \n adds second line, \t for the tab, and \\ to add a backslash 
+// three different lines with tab and backslash 
+
+//Concatenating strings (putting string together)
+var meinestr = "This is first string" + "This is second string";
+console.log(meinestr)
+
+// Concatenating string using += 
+var conStr = "This is first sentence";
+conStr = conStr + "This is second sentence";
+conStr += "This is the second sentence" // shortened example 
+
+// Concatenate string and variable 
+var names = "Mila";
+var myNames = "My name is " + names ". Nice to meet you.";
+
+// Appending Variables to strings ()
+var someAdjective = "worthwhile";
+var mYstr = "Learning to code is ";
+mYstr += someAdjective;
+
+//Length of the string 
+var FirstNameLength = 0;
+var firstName = "Aud";
+FirstNameLength = firstName.length;
+console.log(FirstNameLength);
 
