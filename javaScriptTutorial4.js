@@ -192,3 +192,26 @@ function golfScore(par, strokes) {
     }
 }
 console.log(golfScore(5, 4));
+
+//Switch statement
+// insted of using chained else if statements you can use switch statement
+// a switch statement tests a value and can have a many case statements which define various possible values 
+function caseInSwitch(val) {
+    var answer = "";
+    switch(val) {                //Break means we are at the end of that case statement 
+        case 1:                  //Here we are saying if the case of val is 1 
+            answer = "alpha";
+            break;              //if break was not here and value satisfies even case 2, there would be showed in console case1 and 2
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+    }
+ }
+ console.log(caseInSwitch(1));
+
