@@ -146,6 +146,23 @@ function testElseIf(val) {
 }
 
 //Chaining IF ELSE statements 
-1:24:45 
+function testSize(val) {
+    if (num < 5) {
+        return "Tiny"
+    }
+    else if (num < 10) {
+        return "Small"
+    }
+    else if (num < 15) {
+        return "Medium"
+    }
+    else if (num < 20) {
+        return "Large"
+    }    
+    else {
+        return "Tiny"
+    }   
+}
+console.log(testSize(7));
 
-
+//Golf game using Javascript 
