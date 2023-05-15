@@ -215,3 +215,64 @@ function caseInSwitch(val) {
  }
  console.log(caseInSwitch(1));
 
+
+ //Default option in switch statement 
+function switchOfStuff(val) {
+    var answer = "";
+    switch (val) {
+        case "a";
+            answer = "apple";
+            break;
+        case "b";
+            answer = "banana";
+            break;
+        case "c"
+            answer = "coconut";
+            break;
+        default:                    // if we want to return something, any time a, b, or c is not passed throught
+            answer = "stuff";       // in that case we use default, it sets off for everything that is not a, b or c 
+            break;
+        }
+    return answer;
+}
+console.log(switchOfStuff(3)); 
+
+//Multiple Identical Options in switch statements
+//Switch statement where multiple input gave the same output 
+function sequantialSizes(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+        case 2:
+        case 3:                   //We can do that by eliminating the break statement 
+            answer = "Low";
+            break;
+        case 4;
+        case 5;
+        case 6;
+            answer = "Mid";
+            break;
+        case 7;
+        case 8;
+        case 9;
+            answer = "High";
+            break;
+    }
+    return answer;
+}
+console.log(sequantialSizes(7));
+
+//Returning boolean values from functions 
+function isLess(a, b) {
+if (a < b) {
+    return true;        // we can write this more simply 
+  } else {
+    return false;
+  }
+}
+isLess(10, 15);
+//shortened version 
+function isLEss(a, b) {
+    return a < b;
+}
+console.log(isLEss(11,12));
