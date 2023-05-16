@@ -16,3 +16,4 @@ var myDog = {
 };
 
 // Accessing Object Properties with Dot notation
+1:50:46
