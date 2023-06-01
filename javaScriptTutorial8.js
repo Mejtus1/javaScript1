@@ -86,9 +86,61 @@ var magic = () => { //this is shortened version of anonymous function above
 var magic = () => new Date();
 //this is full function from before, but it is just really shortened up 
 
-
+/////////////////////////////////////////////////////////////////////
 //Write arrow functions with parameters 
 var myConcat = function(arr1, arr2) {
     return arr1.concat(arr2);
 };
+// we can get rid of function keyword, curly braces and return 
+var myConcat = (arr1, arr2) => arr1.concat(arr2); //this is arrow function from above 
+// the arrow functoin will look like this 
 console.log(myConcat([1, 2], [3, 4, 5]));
+
+//higher order arrow functions 
+//when one function takes another function as an argument, that is good time for an arrow funciton
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squareList = (arr) => { //this is normal function 
+    const sqaredIntegers = arr;
+    return sqaredIntegers;
+};
+
+const squareList = (arr) => { 
+    const sqaredIntegers = arr.filter(num => Number.isInteger(num) num > 0).map(x => x * x);
+    return sqaredIntegers;
+};
+
+const sqaredIntegers = squareList(realNumberArray);
+console.log(sqaredIntegers);
+
+//Write higher order arrow functions 
+const increment = (function() {
+renturn function increment(number, value = 1) {
+    returnnumber + value;
+    };
+})();
+console.log(increment(5, 2));
+console.log(increment(5));
+
+
+//Use the rest operator with arrow functions 
+
+const sum = (function) { // 
+    return function sum(x, y, z) { //its function here taking 3 arguments and summing them 
+        const args = [x, y, z]; //at first it takes x, y, z and converts them into an array called args 
+        return args.reduce((a, b)) => a + b, 0); // and its reducing them 
+    };  //its summing them all up here and than returning the results because it reduces them 
+})();
+console.log(sum(1, 2, 3));
+
+//this function using rest opperator 
+// ... = rest operator
+const sum = (function() { 
+        return function sum(...args) { //with this rest operator it will convert everything that is passed in into one array and the array is called args
+            return args.reduce((a, b) => a + b, 0); 
+    };  
+})();
+console.log(sum(1, 2, 3, 4)); //we can have any number of arguments not just 3
+
+//Use the Spread Operator to evaluate arrays In-place 
+2:55:31
