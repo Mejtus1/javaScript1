@@ -184,4 +184,24 @@ for ( var i = 10; i > 0; i--) {
 console.log("Hold");
 
 //while loops
+//while loop is quite similar to the for loop 
+var counter = 3;
+while (counter > 0) {
+  console.log(counter);
+  counter = counter - 1;
+}
+ 
+//nested loops 
+//they are used to perform more than one task at the same time 
+//in javascript we can nest loops inside other loops 
+//practical example of nested loop (two week plan from monday to friday)
+for (var i = 1; i <= 2; i++) { //first loop loops over the weeks
+
+  for (var j = 1; j <= 5; j++) { //second (nested) loop loops over the days 
+      console.log("Week " + i + " day " + j)
+  }
+}
+//the more nested loops there are the slower  the code will run
+
+//Functions 
 

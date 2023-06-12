@@ -164,3 +164,26 @@ console.log(arr2);
 //so if we run this there wll be no potato 
 
 //Use Destructuring assignment to assign variables from objectives 
+//special syntax for assigning values taken from an object to a variabůe
+var voxel = {x: 3.6, y: 7.4, z: 6.54 } //object with three elements (x,y,z)
+var x = voxel.x; //this is an old way of taking variable from object and 
+var y = voxel.y; //assign it a value   
+var z = voxel.z;
+//for destructuring there is a way to assign variables for each element in an object 
+const { x : a, y : b, z : c } = voxel;//destructuring syntax
+//here we are creating variables (a,b,c) and assigning them to an object (x,y,z)
+//get the field of x and copy ít to the value of a 
+const AVG_TEMPERATURES = {
+    today: 77.5,
+    tomorrow: 79
+};
+
+function getTempOfTmrw(AVG_TEMPERATURES) { //we are using destructuring of avg_temp object here
+    "use strict"; 
+    const { tomorrow : tempOfTomorrow } = AVG_TEMPERATURES; //get the tomorrow field from AVG_TEMPERATURES object and assign it to the tempOfTomorrow 
+    return tempOfTomorrow; //now we have 
+};
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+//Destructuring assignment with nested objects 
+
