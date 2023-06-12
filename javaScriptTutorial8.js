@@ -143,4 +143,24 @@ const sum = (function() {
 console.log(sum(1, 2, 3, 4)); //we can have any number of arguments not just 3
 
 //Use the Spread Operator to evaluate arrays In-place 
-2:55:31
+//the spread operator looks just like rest operator, but it spreads out an existing array 
+const arr1 = ["Jan", "Feb", "Mar", "Apr", "May"]; //spread operator can be used instead of actual array 
+//you can only use it in an argument of an function or an array literal 
+let arr2;
+(function() {
+arr2 = arr1 
+arr1[0] = "potato" //if we set the array 1 to potato and we log it, the result is potato instead of jan 
+})();              //because they are equal, arr1 and arr2 
+console.log(arr2);
+
+
+const arr1 = ["Jan", "Feb", "Mar", "Apr", "May"];
+let arr2;
+(function() {
+arr2 = [...arr1]; //it spreads out contents of arr1 into array2, so arr1 is not equal to arr2 
+arr1[0] = "potato"  
+})();             
+console.log(arr2);
+//so if we run this there wll be no potato 
+
+//Use Destructuring assignment to assign variables from objectives 
