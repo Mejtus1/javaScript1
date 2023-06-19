@@ -185,5 +185,151 @@ function getTempOfTmrw(AVG_TEMPERATURES) { //we are using destructuring of avg_t
 };
 console.log(getTempOfTmrw(AVG_TEMPERATURES));
 
-//Destructuring assignment with nested objects 
+//Destructuring assignment with nested objects .....................
 
+const LOCAL_FORECAST = { 
+    today: { min: 72, max: 83 }, //Nested objects (forecast of today)
+    tomorrow: { min: 73.3, max: 84.6 } //Nested objects (forecast of tomorrow)
+};
+
+function getMaxOfTmrw(forecast) { //we are gonna pass in the forecast, the LOCAL_FORECAST becomes the forecast variable
+    "use strict";
+
+    const { tomorrow : { max : maxofTomorrow }} = forecast; //we want to figure of the max of tommorrow
+                                    //we are gonna use destructuring to figure that out
+    //we set the max that was inside tomorrow to maxOfTomorrow 
+    //we use double { because we are going inside nested object 
+    return maxofTomorrow;
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+
+
+//Use Destructuring assignment to assign variables from arrays 
+const [z, x, , y] = [1, 2, 3, 4, 5, 6]; //we are assigning y to 4 
+//the difference between destructuring from arrays and from objects is that we cannot specify which element of the array to go into a variable 
+console.log(z, x, y); // we will see 1 2 and 4 
+
+let a = 8, b = 6; //we can use destruturing of arrays to switch a places with a variables 
+(() => {
+    "use strict";
+    [a, b] = [b, a]//we use destructuring to switch places of variables in the array 
+})();
+console.log(a); //it will log out 6 and 8 
+console.log(b); //instead of 8 and 6 
+
+
+
+
+//Use destructuring assignment with the rest operator 
+const source = [1,2,3,4,5,6,7,8,9,10]; //source array
+function removeFirstTwo(list) {
+    const [ , , ...arr] = list; //we remove the first two, by writing two commas with nothing between them 
+    //it says do nothing to the first and second element and everything else put into arr variable
+    return arr;
+}
+const arr = removeFirstTwo(source); //we removed first two elements of the array
+console.log(arr);
+console.log(source); //original source variable
+
+
+
+
+
+//Use Destructuring Assignment to pass an object as a functions parameters
+const stats = {
+    max: 56.78,
+    standard_deviation: 4.34,
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+};
+const half = (function() {
+
+    return function half({ max, min }) { //with this function we are only using stats.mox and min
+        return (max + min) / 2.0;
+    };
+})();
+console.log(stats); //stats down here is passing whole stats object to the console
+console.log(half(stats));
+
+
+
+
+
+//create strings using template literals 
+const person = {
+    name: "Zodiac Hasbro",
+    age: 56
+};
+//Template literal with multi-line and string interpolation 
+const greeting = `Hello, my name is ${person.name}! 
+I am ${person.age} years old.`; //template litterals = backticks, you can make multiline strings
+console.log(greeting);          //another thing is when we see ${person.name} dollar sign that is javascript and we are using 
+                                //it makes things easier because YOU CAN PUT VARIABLES RIGHT INTO THE STRINGS 
+
+//we want to return each element in the array as template literal (strings using backticks with variables inside of them)
+const result = {
+    success: [ , , ...arr]
+    failure: [ , , ...arr]
+    skipped: [ , , ...arr]
+};
+
+function makeList(arr) {
+    const resultDisplayArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+    }                           //we are using template litteral with variable inside dollar sign and curly braces 
+    return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(result.failure);
+console.log(resultDisplayArray);
+
+
+
+//Write Concise Object Literal Declarations Using Simple Fields
+const createPerson = (name, age, gender) => { //ES6 added support for easy defining object literals
+//function is an arrow function => (name, age, gender) and takes these 3 variables and return and object
+    return {
+        name: name, 
+        age: age, 
+        gender: gender
+    };
+
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male")); //we can use it like this 
+//BUT WE CAN MAKE IT MUCH EASIER WAY deleto whole return thing and write it like this 
+const createPerson = (name, age, gender) => ( { name, age, gender } );
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+
+
+
+//Write Concise Declarative Functions 
+const bicycle = { //an object can own a function 
+    gear: 2,
+    setGear(newGear) { //this is a  way of putting a function inside a object
+        "use strict";
+        this.gear = newGear;
+    }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+
+
+//Use class Syntax to Define a Constructor Function 
+var SpaceShuttle = function(targetPlanet){ //this is an older way to create an object
+    this.targetPlanet = targetPlanet; //this is a constructor function 
+}
+var zeus = new SpaceShuttle("Jupiter"); //we can instatiating (constructing) an object SpaceShuttle
+console.log(zeus.targetPlanet) //we construct the object with constructor and then create it with new 
+//the class syntax replaces 
+class SpaceShuttle {
+    constructor(targetPlanet){
+        this.targetPlanet = targetPlanet;
+    }
+}
+var zeus = new SpaceShuttle("Jupiter");
+console.log(zeus.targetPlanet)
