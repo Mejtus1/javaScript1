@@ -66,3 +66,60 @@ const Component = () => {
 
 //...................................................................................
 //Objects in javascript and JSX 
+//Destructuring of objects 
+
+const person = {
+    name: "Pedro"
+    age: 20,
+    isMarried: false,
+};
+//if we want to create variables that create specific values inside this object
+const name = person.name //now we have variable name from object Person and key value pair with its value 
+const age = person.age
+const isMarried = person.isMarried //This is again taking too much space
+//We can write it in a single line using destructuring objects
+//Like this:
+const { name, age, isMarried } = person; //this corresponds to 3 line code above
+
+//same name variables and key value pairs inside objects
+const name = "Pedro";
+const age = 20;
+const person = {
+    name, //we dont have to rewrite values in key value pairs inside objects
+    age, // we just set them like this it saves space 
+    isMarried: false,
+}
+
+
+
+//We want to create same Person as Person1 but the name is other 
+//HOW to I copy a object but change just a one single property of it 
+const person = {
+    name: "Pedro"
+    age: 20,
+    isMarried: false,
+};
+// (...) = spread operator //I want to keep everything insïde of this Object, but
+const person2 = {...person, name: "Jack"}
+                           //whatever i put here
+                           //changes ! 
+
+
+
+//ARRAYS and destructuring 
+const names = ["Pedro", "Jack", "Victoria"]
+const names2 = [...names, "Joel"]; //we add here name Joel + array names into new array names2
+//this is how you are going to manipulate and add 
+//elements to arrays that are inside of states
+
+
+//........................................................................................................
+//Important Array functions used in React 
+//These functions are used to manipulate arrays in various manners
+let namess = ["Pedro", "Jack", "Victoria"];
+//.map and .filter functions 
+
+names.map(() => {
+    
+})
+
