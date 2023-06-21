@@ -205,3 +205,42 @@ for (var i = 1; i <= 2; i++) { //first loop loops over the weeks
 
 //Functions 
 
+//De-structuring arrays and objects 
+//to illustrate destructuring imagine an object which than 
+//become independent of the original but was at the start copy of the original
+//example: copy folder 
+let {PI} = Math; //PI property exists on Math object 
+PI;
+//we can only destructure something that only exists on an object
+let {pi} = Math;
+pi; //returns undefined 
+//we can evaluate the PI object with Math.PI which results in true 
+PI === Math.PI;
+//we update PI 
+PI = 1;
+PI === Math.PI //boolean returns false because we changed
+//THE DESTRUCTURED VARIABLE which is now PI = 1, the source
+//property of an object is still 3.14..... 
+
+const car2 = {
+  speed: 200,
+  color: "red"
+}
+console.log(Object.keys(car2)); // ['speed','color']
+//Object keys METHOD returns key value pair names = speed color
+
+const car3 = {
+  speed: 300,
+  color: "yellow"
+}
+console.log(Object.values(car3)); // [300, 'yellow']
+//Object.values method returns key value pair properties = 300, yellow 
+
+const car4 = {
+  speed: 400,
+  color: 'magenta'
+}
+console.log(Object.entries(car4));
+//Object.entries() method returns an array listing both the keys and the values.
+//returns [ ['speed', 400], ['color', 'magenta'] ]
+
