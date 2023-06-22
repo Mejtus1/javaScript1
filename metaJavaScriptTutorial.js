@@ -228,7 +228,141 @@ addTwoNzms(4,7); //function can b reused as many times as we need
 
 
 //Storing data in Arrays 
+//they are used to store and rearange sequenced collection of items 
+var train1 = ["wheat", "barley", "potato", "salt", "rocks"]
+/* values         0        1         2        3       4          */
+//arrays signal that the assigned values are all part of a group
+//values are set in specific sequence
+//each one can be accessed through it specific number 
 
+
+
+//Objects 
+var storeSalesperson = {} //objects are inside curly braces
+                          //this creates an empty object literal 
+
+var storeManager = {} //empty object literal
+//lets say we want to create variable traits for storeManager
+//we can create object traits using . (dot) operator 
+storeManager.rangetilesPerTurn = 4;
+storeManager.socialSkills = 50;
+storeManager.streetSmarts = 50;
+storeManager.health = 30;
+storeManager.specialAbility = "finding business opportunities";
+storeManager.greeting = "Lets make some money";
+
+//we can create object notation using curly brackets
+var assistantManager = { //we created an object 
+  movement: 3, //and assigned some values to its properties
+  socialSkills: 30,
+  streetSmarts: 30,
+  health: 40
+}
+
+socialSkills = 50;
+/*Variable name    Variable value                                  */
+    socialSkills = 50;
+/*Property key     Property value                                  */
+//They then become key value pairs 
+
+
+
+
+//MATH OBJECT
+//mostly used to generate random number between 0 and 0.99
+// Generate a decimal number between 0 and 0.99
+Math.random(); //method
+
+// Save it to a variable: 
+var decimal = Math.random();
+
+// Log the value of decimal to the console
+console.log(decimal);
+
+// Log the value of decimal MULTIPLIED by 100 (we get normal number between 1 and 99)
+console.log(decimal * 100);
+
+Math.cell(); //method - is used to round up ecimal to the nearest integer
+var rounded = Math.ceil(0.0001); // 1 
+var roundedd = Math.ceil(0.5); // 1 
+var roundeddd = Math.ceil(1.01); // 2 
+var roundedddd = Math.ceil(2.99); // 3 
+
+var decimaal = Math.random() * 10; // random method randomly generates number between 0,1 and 10
+var roundeed = Math.ceil(decimal); // ceil method rounds up to the nearest integer
+console.log(rounded); //console outputs our number 
+
+
+
+
+//STRINGS (FURTHER EXPLAINED)
+//Iterable = any data type that can be iterated over using a FOR OF loop
+
+//you can run a for loop over an array of letters and output the result 
+var lettters = ['a', 'b', 'c'];
+for (var i=0; i<letters.length; i++) {
+  console.log(letters[i]);
+} //outputs a, b, c 
+
+//additionaly you can run a for loop over a string 
+//loop over a string abc to output a letters individually 
+var letters = "abc";
+for (var i=0; i<letters.length; i++) {
+  console.log(letters[i]);
+} //outputs a, b, c 
+
+//Iterable arraays (they can be itterated over by a for loop)
+var veggies = ['onion', 'parsley', 'carrot']; 
+
+console.log(veggies.length); //outputs number of array items = 3
+
+console.log(veggies[0]); //array index zero = onion
+console.log(veggies[1]); // parsley
+
+for (var i = 0; i < veggies.length; i++) { //veggies.length = 2, if i < than 2 run for loop
+  console.log(veggies[i]); 
+} //we iterated over items in the array with for loop which MEANS ITS ITTERABLE
+
+
+//Iterate over strings (they can be)
+var greeting = 'Howdy';
+console.log(greeting.length); //5
+
+console.log(greeting[0]); //H
+console.log(greeting[1]); //o
+
+for (var i = 0; i < greeting.length; i++) {
+    console.log(greeting[i]); //outputs H o w d y 
+}
+//despice the simmilar display strings ARE not arrays 
+//We will see it more closely in this example 
+var greet = "Hello";
+var user = "Lisa";
+
+console.log( greet.pop() ); //method outputs error, (array method)
+
+console.log( greet + user ); // Hello Lisa 
+
+console.log( greet.concat(user) );//Concat method accepts whatever variable i want to concat (join)
+
+//both method and + operator can be used in arrays and in strings 
+
+
+
+
+//Typeof operator (idenfiy data types in javascript)
+//To use it type typeof
+var test = typeof("What is this?") //string 
+var test2 = typeof(10);            //number 
+var test3 = typeof(3.14);          //number 
+var test4 = typeof(true);          //boolean 
+var test5 = typeof(1 < 2)          //boolean
+var test6 = typeof({ firstProperty: 1}) //object
+
+
+
+
+//Introduction to functional programming 
 
 
 
