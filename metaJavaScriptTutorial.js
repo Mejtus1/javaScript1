@@ -203,6 +203,8 @@ for (var i = 1; i <= 2; i++) { //first loop loops over the weeks
 }
 //the more nested loops there are the slower  the code will run
 
+
+
 //Functions 
 
 //De-structuring arrays and objects 
@@ -243,4 +245,25 @@ const car4 = {
 console.log(Object.entries(car4));
 //Object.entries() method returns an array listing both the keys and the values.
 //returns [ ['speed', 400], ['color', 'magenta'] ]
+
+
+
+//For of and for in prototype loops on objects
+//For in loop runs over all objects values (prototypes)
+//For of loop runs over specified object value (prototype)
+
+const car = {
+  engine: true
+}
+const sportsCar = Object.create(car);
+sportsCar.speed = "fast";
+console.log("The sportsCar object: ", sportsCar);
+
+for (prop in sportsCar) { 
+  console.log(":P", prop);
+} //Displays speed, engine (engine belongs to the protoype of the car object not the sportscar object itself)
+//outputs properties of the sportscar and original object properties too
+for (prop of Object.keys(sportsCar)) {
+  console.log(":P", prop + ": " + sportsCar[prop]);
+} //outputs only the properties of keys of sportscar 
 
