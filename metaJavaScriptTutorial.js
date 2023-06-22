@@ -206,6 +206,31 @@ for (var i = 1; i <= 2; i++) { //first loop loops over the weeks
 
 
 //Functions 
+//functions take several lines of codes and perform a set of related actoins 
+//and group them together, you can invoke a function (run it later)
+function addTwoNumbers() {
+//code that runs inside a function 
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+    console.log(c);
+}
+addTwoNumbers(); //we invoke the function like this 
+
+//to make function more usable we dont have to specify values like in the example above
+function addTwoNums(a,b) { //values are placed inside function definition (a,b)
+  var c = a + b;
+  console.log(c);
+}
+addTwoNums(2,2);
+addTwoNzms(4,7); //function can b reused as many times as we need 
+
+
+
+//Storing data in Arrays 
+
+
+
 
 //De-structuring arrays and objects 
 //to illustrate destructuring imagine an object which than 
