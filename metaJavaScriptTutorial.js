@@ -363,9 +363,105 @@ var test6 = typeof({ firstProperty: 1}) //object
 
 
 //Introduction to functional programming 
+//computer languages have multiple programming paradigms 
+//Functional programming and Object Oriented Programming 
+//There is a clear destinction between functions and data in functional programming 
+var shoes = 100; //data 
+function totalPrice(price, tax) { //Functions 
+return price * tax;
+}
+//When functions need some data, you passed in the values in the forms of arguents
+var ToPay = totalPrice(shoes, stateTax);
+
+//Practucal implementation of functional programming 
+var currencyOne = 100;
+var currencyTwo = 0;    //this is functional programming 
+var exchangeRate = 1.2; //separating data from functions 
+
+function covertCurrency(amount, rate) { //separated functions 
+  return amount * rate;
+}
+currencyTwo = covertCurrency(currencyOne, exchangeRate);
+console.log(currencyTwo);
+
+
+//Function calling and recursion 
+/* Functions that repeat tasks are helpful unless they run endlessly 
+Recursive functions (to avoid infinite loop) */
+function example() {
+  console.log("line one");
+  console.log("line two");
+  console.log("line three");
+}
+
+function example() {
+  console.log("line one");
+  console.log("line two");
+  console.log("line three");
+  example(); //this will repeat in an infinite loop 
+}
+//function using RECURSION 
+let counter = 3;
+function example() {
+  console.log(counter);
+  counter = counter - 1;
+  if (counter === 0) return; //in this function it will log the numbers 3 2 1 
+  example(); //when a function call itself this is what is known as recursion 
+} //recursion is an alternative way to run repetetive code without the use of loops 
 
 
 
+
+//SCOPE 
+//the code that exists outside of the function is a global scope 
+//and all the code inside of a function is refferd to as local scope 
+
+var num1 = 1; //global scope 
+
+function score() { //local scope 
+ var num2 = 20;
+ console.log(num2);
+}
+
+//.........................................................................................................//
+//Scoping with var, let and const 
+//ES6 introduced block scope (block scope is used using let and const)
+//they become immediatly to the code block they were created in
+let color = "red"; //Global variable
+if (color == "red") { //Two separate variables with the same name 
+    let color == "blue" 
+} //Block scope curly braces, variables can be accessed only inside their scope
+
+var 
+//var can be used before it is declared
+//same variable can be redeclaerd
+//can be scoped to a function or globally 
+var user = "Victoria";
+var user = "Viki"; //redeclared without errors 
+
+let 
+//we cannost access let variable before we declare it 
+let 
+//we cannost declare an unassigned variable with let
+let user;
+//we cannot redeclare a variable 
+let user = "Vicky";
+let user = "Victoria";
+//we can reaassign it 
+let user1 = "Victoria";
+user1 = "Victoria1";
+
+const 
+//const must be initialized 
+//cannot be accessed before initialization 
+//cannot be redeclared
+
+
+//.........................................................................................................//
+//Object Oriented Programming 
+
+
+//.........................................................................................................//
 //De-structuring arrays and objects 
 //to illustrate destructuring imagine an object which than 
 //become independent of the original but was at the start copy of the original
