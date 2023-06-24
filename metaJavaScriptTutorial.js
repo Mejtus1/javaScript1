@@ -459,6 +459,92 @@ const
 
 //.........................................................................................................//
 //Object Oriented Programming 
+//Organizing programs using objects to group related data and functionality 
+
+//in OOP we create and object and store all data including data, variables and functions
+var purchase1 = {
+  shoes: 100,
+  stateTax: 1.2,
+  totalPrice: function() { //FUNCTIONS INSIDE OBJECTS ARE KNOWN AS METHODS 
+    var calculation = purchase1.shoes * purchase1.stateTax;
+    console.log("Total price:", calculation);
+  }
+}
+//you can access the totalPrice method on purchase1 object using the dot (.) notation 
+purchase1.totalPrice; //we can access totalPrice data
+purchase1.stateTax;   //and stateTax data
+
+//We can make as many objects as we need 
+var purchase2 = {
+  shoes: 50,
+  stateTax: 1.2,
+  totalPrice: function() { //It can be seen that both methods in these objects are almost the same 
+    var calculation = purchase2.shoes * purchase2.stateTax; //we can do that by this keyword
+    console.log("Total price:", calculation);
+  }
+  //........................................//
+  totalPrice: function() { 
+    var calculation = this.shoes * this.stateTax; //THIS keyword, it esentially means this object
+    console.log("Total price:", calculation);     //since the object is the same in both objects
+  }
+}
+//Rewriting same methods in each object is wasteful 
+//We use templates for our methods in this scenario 
+//One of the most effective way to build templates in javascript is using classes
+
+
+//.........................................................................................................//
+//CLASSES
+//in javascript any class is build using the class keyword, with a name of a car and curly braces
+class Car {
+  constructor(color, speed) { //constructor function accepts as many parameters as it needs 
+    this.color = color;       //the role is to assign the passed in parameters 
+    this.speed = speed;       //when instanciating new objects 
+  }
+  //after the constructor is defined, you add as many methods as you want 
+  turboOn() { //YOU DONT USE THE FUNCTION keyword HERE, only the name of the method 
+    console.log("turbo is on!")
+  }
+}
+//To access the turboOn method you type car1.turboOn
+car1.turboOn();
+
+//continuing to understand constructor
+class User { //constructor function is a functian that actually creates objects 
+  construcor(email, name){
+      this.email = "Vicky@gmail.com"
+      this.name = "Ryu";
+  }
+}
+var userTwo = new User("Victoria@gmail.com", "Victoria") //when we call this constructor we are passing these two values
+// (email, name) into userTwo, instead of hardcoding it again it makes whole process faster 
+
+var userOne = new User(); //User have a Capital U, that way JS knows to look for class up there
+//userOne is a random name we choose
+/* the "new" keyword - creates new empty object
+                     - sets a value of this to be the new empty object
+                     - calls the constructor method */
+
+//Javascript build in object types 
+//Math, Date, Object, Function, Boolean, Symbol, Array, Map, Set, Promise, JSON ...
+//Constructor function must be used with a operator (new)
+
+function Icecream(flavor) {
+    this.flavor = flavor;
+    this.meltIt = function() {
+        console.log(`The ${this.flavor} icecream has melted`);
+    }
+} //now we can make as many icecreams as we want 
+let kiwiIcecream = new Icecream("kiwi");
+let appleIcecream = new Icecream("apple");
+kiwiIcecream; // --> Icecream {flavor: 'kiwi', meltIt: ƒ}
+appleIcecream; // --> Icecream {flavor: 'apple', meltIt: ƒ}
+
+
+
+//.........................................................................................................//
+//INHERETANCE 
+
 
 
 //.........................................................................................................//
