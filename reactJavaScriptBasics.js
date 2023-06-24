@@ -119,7 +119,17 @@ const names2 = [...names, "Joel"]; //we add here name Joel + array names into ne
 let namess = ["Pedro", "Jack", "Victoria"];
 //.map and .filter functions 
 
-names.map(() => {
-    
+names.map((name) => { //we want to add an number to each of the elements of array 
+    return name + "1"; //every elemnt becomes the name + 1 
+    console.log(name); //
+})  //we are going to itterate over this array and 
+// what ever is inside this arrow function that we created input into it 
+
+names.filter((name) => {
+    return name !== "Pedro" //Gets rid of the Pedro names in the array 
 })
 
+
+//........................................................................................................
+//Async + Avait + Fetch;
+//Fundamental for web application communications 
