@@ -544,6 +544,30 @@ appleIcecream; // --> Icecream {flavor: 'apple', meltIt: ƒ}
 
 //.........................................................................................................//
 //INHERETANCE 
+//Ineritence model involves prototype in javsScript
+//Prototype is an object that can hold properties of multiple other objects
+var bird = {
+  hasWings: true,
+  canFly: true,
+  hasFeathers: true,
+}
+var eagle1 = Object.create(bird); //we have set the eagle1 variable to bird object 
+//and using Object.create method passes (inheritance) to the eagle1 variable
+console.log("eagle1: ", eagle1); //eagle1 {} (creates eagle1 object and instanciates properties of bird to eagle1)
+console.log("eagle1 has wings:" eagle1.hasWings); //true
+console.log("eagle can fly:" eagle1.canFly); //true
+console.log("eagle1 has feathers:", eagle1.hasFeathers);
+
+//here we created a eagle2 variable and we have used the bird object as a prototype
+var eagle2 = Object.create(bird);
+console.log("eagle2 has wings:" eagle2.hasWings); //true
+//eagle2 has access to the properties stored on a bird object as its prototype 
+
+var penguin1 = Object.create(bird);
+//we want to set can fly = false)
+//javascript starts to look for properties on its object, after that on its prototype
+//se if we set the penguin canFly to false, it will read it first here and output it
+penguin1.canFly = false;
 
 
 
@@ -588,7 +612,7 @@ console.log(Object.entries(car4));
 //returns [ ['speed', 400], ['color', 'magenta'] ]
 
 
-
+//.........................................................................................................//
 //For of and for in prototype loops on objects
 //For in loop runs over all objects values (prototypes)
 //For of loop runs over specified object value (prototype)
@@ -608,3 +632,8 @@ for (prop of Object.keys(sportsCar)) {
   console.log(":P", prop + ": " + sportsCar[prop]);
 } //outputs only the properties of keys of sportscar 
 
+
+
+//.........................................................................................................//
+//.........................................................................................................//
+//Working with template literals 
