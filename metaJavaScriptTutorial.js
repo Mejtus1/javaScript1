@@ -633,6 +633,31 @@ for (prop of Object.keys(sportsCar)) {
 } //outputs only the properties of keys of sportscar 
 
 
+
 //.........................................................................................................//
 //.........................................................................................................//
 //Working with template literals 
+
+//ES5 Strings
+let noMultiLine = "No multi-line strings in ES5";
+console.log("Did you know ? " + noMultiLine);
+
+//ES6 Multi-line template literals 
+let multiLine = ` 
+  Using ES6
+  backticks,
+  multi-line
+  strings 
+  are 
+  possible!
+`; //This string in multiple lines using backticks ``is known as template literal
+console.log(multiLine)
+//we can add as many lines as we want
+//We can combine template literals iwth VARIABLES 
+
+//ES6 variable interpretation 
+let first = `He said, "Don't you know? ES6, it's got some great features"`;
+let second = `"Wouldn't you want to learn more ?", he asked.`;
+console.log(`${first} - and I got curious. ${second}`);
+//When using template literals `` we can use both upper quotes in strings
+//We can output variables with dollar sign and parenthesis ${first} with a variable inside
