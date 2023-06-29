@@ -661,3 +661,53 @@ let second = `"Wouldn't you want to learn more ?", he asked.`;
 console.log(`${first} - and I got curious. ${second}`);
 //When using template literals `` we can use both upper quotes in strings
 //We can output variables with dollar sign and parenthesis ${first} with a variable inside
+
+
+
+//
+//Data structures
+//a data structure is a way to organize data
+//Most common data types in javascript are: objectsm arraysm naos abd sets
+
+//Object is an unordered nonitereable key value pairs
+//Example is when you write object orienteted code
+const car = {
+  owner: "John",
+  color: "Red", //key value pairs
+
+  engineOn: function() { //OOP programming paradigm
+    console.log("engine is on");
+  }
+}
+
+//arrray
+//ordered iterable store of value 
+//we use arrays to store and later use values in arrays 
+//we do not specify index, javascript does it automatically 
+//we specify index only when accessing specific values in array
+//for example: to find the average grade you can loop over the array and provigding the sum
+//than dividing the sum with number by the length of the array
+const grades = [75,95,90,85,80,85];
+let gradesSum = 0;
+
+for(i = 0; i < grades.length; i++) {
+  gradesSum += grades[i]
+}
+console.log(gradesSum / grades.length )
+//Outputs 85
+
+//Map 
+//map is like an arary, it consists of key value pairs, it is important 
+//to not confuse with object, with maps ANY VALUE CAN BE USED AS A KEY (with objects keys can only be symbols or symbols)
+//usable example is hash values 
+
+//Set
+//another collection where each item in a collection must be unique
+const set = new Set()
+
+const house1 = "red"
+const house2 = "blue"
+const house3 = "red"
+
+//no errors will be thrown and no updates will be set
+
