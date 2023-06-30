@@ -664,7 +664,8 @@ console.log(`${first} - and I got curious. ${second}`);
 
 
 
-//
+//.........................................................................................................//
+//.........................................................................................................//
 //Data structures
 //a data structure is a way to organize data
 //Most common data types in javascript are: objectsm arraysm naos abd sets
@@ -711,3 +712,50 @@ const house3 = "red"
 
 //no errors will be thrown and no updates will be set
 
+
+
+//.........................................................................................................//
+//.........................................................................................................//
+//SPREAD OPERATOR 
+//It is the easiest way to copy the properties of an object onto a
+//newly created object, it should be thought of as a multipuropse tool
+//that can spread out array items and join objects together
+
+let top3 = [
+  "The Colosseum",
+  "Trevi Fountain",
+  "The Vatican City"
+];
+
+function showItinerary(placce1, place2, place3) {
+  console.log("Visit " + place1);
+  console.log("Then visit " + place2);
+  console.log("Finish with a visit to " + place3);
+}
+
+showItinerary(top3[0], top3[1], top3[2]); //outputs function with array top3
+//what if we wanted to insert into our functoin new array (top7)
+//we need to specify new array and then call the function again with new values
+let top7 = [
+  "V",
+  "I",
+  "C",
+  "K",
+  "Y",
+  "1",
+  "7"
+];
+showItinerary(top7[0], top7[1], top7[2], top7[3], top7[4], top7[5], top7[6]);
+//We can much simplify things with Spread operator ( ... )
+showItinerary(...top7); //thats all 
+//you dont have to list each individual member of the array 
+
+//we can also shorten our first code with 
+showItinerary(...top3);
+
+
+
+
+//.........................................................................................................//
+//.........................................................................................................//
+//Rest operator 
