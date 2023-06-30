@@ -759,3 +759,25 @@ showItinerary(...top3);
 //.........................................................................................................//
 //.........................................................................................................//
 //Rest operator 
+//The rest operator gives us that is left over of the source array, as a separate sub array
+//It allows you to take items from an array and use them to create a separate sub-array
+//The rest operator can be used to destructure existing array items, rather than typing them out 
+
+const top7 [
+  "The Colosseum",
+  "The Roman Fountain",
+  "The Vatican",
+  "Travi Fountain",
+  "The Pantheon",
+  "Pizza Venezia",
+  "The Palatine Hill"
+]
+
+const [] = top7;
+
+const [first, second, third, ...secondVisit] = top7;
+//with this syntax I extracted the top7 array into 4 variables 
+/* first, second, third = "The Colosseum", "Roman Fountain", "The Vatican"
+and variable secondVisit creates an array of remaining items )
+["Travi Fountain", "The Pantheon", "Pizza Venezia", "The Palatine Hill"];
+
