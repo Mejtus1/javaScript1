@@ -779,5 +779,14 @@ const [first, second, third, ...secondVisit] = top7;
 //with this syntax I extracted the top7 array into 4 variables 
 /* first, second, third = "The Colosseum", "Roman Fountain", "The Vatican"
 and variable secondVisit creates an array of remaining items )
-["Travi Fountain", "The Pantheon", "Pizza Venezia", "The Palatine Hill"];
+["Travi Fountain", "The Pantheon", "Pizza Venezia", "The Palatine Hill"]; */
+
+//Rest operator and functions 
+function addTaxToPrices(taxRate, ...itemsBought) { //function addTaxToPrices with two parameters
+  return itemsBought.map(item => taxRate * item) //...itemsBought (rest operator) must be last item in the function 
+} //using rest parameter to quickly muiltiply values  
+
+
+
+
 
