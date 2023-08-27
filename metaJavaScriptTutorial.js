@@ -786,6 +786,35 @@ function addTaxToPrices(taxRate, ...itemsBought) { //function addTaxToPrices wit
   return itemsBought.map(item => taxRate * item) //...itemsBought (rest operator) must be last item in the function 
 } //using rest parameter to quickly muiltiply values  
 
+//Event handling 
+//Button click = User-triggered events (they are happening all the time)
+//we can use javascript to listen to these events 
+//two ways to set up an event listener:
+const target = document.querySelector("body")
+function handleClick() {
+    console.log("clicked the body")
+} 
+target.addEventListener("click", handleClick)
+function handleClick() {
+    console.log("Clicked the heading") //we need to add this one as a reference to the html structure
+} 
+//now when we click on our body element we get output "clicked the body"
+//when we lick on our heading element we get output "clicked the heading"
+
+//Web page content update
+var h1 = document.createElement('h1')
+h1.innerText = "Type into the input to make this text change"
+
+var input = document.createElement('input')
+input.setAttribute('type', 'text')
+
+document.body.innerText = '';
+document.body.appendChild(h1);
+document.body.appendChild(input);
+
+input.addEventListener('change', function() {
+    h1.innerText = input.value
+})
 
 
 
