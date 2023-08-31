@@ -911,5 +911,26 @@ For example, what if you try to stringify a function? The operation will silentl
    '["one", "two", "three"]' stringified JSON array 
    '[{ "color": "blue" }, {"color: "red"}]' = stringified JSON array holding objects with key value pairs*/
  
+//Converting a JSON string to a regular object 
+'{"greeting": "hello"}'
+//returns {"greeting":"hello"}
+const jsonStr = '{"greeting":"hello"}'
+//returns undefined
+JSON.parse(jsonStr)
+//returns {"greeting":"hello"}
+const aPlainObj = JSON.parse(jsonStr)
+//returns undefined
+aPlainObj.greeting = "hi"
+//returns "hi"
+aPlainObj
+//{greeting: "hi"} 
 
+//Converting a regular object to a JSON string 
+const data = {
+    firstName: "John",
+    lastName: "Doe",
+    greeting: "Hello",
+}
+JSON.stringify(data)
+//returns: {"firstName": "John", "lastName": "Doe", "greeting": "Hello"}
 
