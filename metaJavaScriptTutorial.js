@@ -934,3 +934,49 @@ const data = {
 JSON.stringify(data)
 //returns: {"firstName": "John", "lastName": "Doe", "greeting": "Hello"}
 
+//Javascript enviroments = NPM and Node,js
+/*Node.js is a separate standalone environment. 
+Node.js can run in multiple settings: 
+- on the command line
+- in a desktop application
+- on the back end of a web app 
+
+Before the introduction of Node.js, developers had to build backends in other technologies and languages such as 
+PHP, Python, C-sharp, Ruby, and Java. After Node.js became available, it was possible to use JavaScript on the backend 
+or on the server-side. This means that today you can write full-stack JavaScript programs. 
+In other words, you can write JavaScript on the client and on the server. 
+Node.js comes with a package manager called npm, which stands for Node Package Manager. 
+The package manager allows you to use a large number of libraries and frameworks as Node.js modules. 
+An npm module is a standalone piece of code that has been published on the npm website. 
+Sometimes an npm module is also referred to as an npm package. 
+
+Installing Node and NPM
+node v16.14.2  
+npm 8.5.0
+
+Installing Node.js and npm
+node --version && npm --version
+
+
+Testing 
+We can help our code readability and what output ot expect from it by commends
+or 
+We can use testing tools to TEST our code (like JEST)*/
+function concatStrings(strA, strB) {
+  return strA + strB;
+}
+concatStrings("abc","def");
+
+//JEST testing framework 
+//(expect = build in function in JEST)
+//(toBe = build in function in JEST)
+expect(concatStrings("abc", "def")).toBe("abcdef") //we are exoecting from this code this value 
+
+/*Refactoring
+to improve the app's code and the test code, but without changing the behavior of either. 
+is known as refactoring 
+Refactoring is process in which write feature code so that it 
+- runs more efficiently 
+- it's easier to read 
+- easier to understand for other programmers on the team
+
