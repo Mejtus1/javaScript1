@@ -980,3 +980,21 @@ Refactoring is process in which write feature code so that it
 - it's easier to read 
 - easier to understand for other programmers on the team
 
+3 Types of testing 
+Testing = confirming that software works as specified in the software requirements
+1. e2e testing = ensures that the entire end product behaves as it should
+e2e testing on web app = testing web application on browser same way as user might use it 
+- in other words testing the entire end product of the perspective of the end user
+- e2e testing is the slowest 
+- examples for testing: Webdriver JS, Protractor, Cypress
+
+2.Integration testing = testing how separate parts of app works together
+- faster and cheaper than e2e test
+
+3. unit testing = testing the smallest units of source code 
+unit = smallest piece of code that you can test separetely from the rest of the app 
+- usually the smallest units are functions or methods 
+
+for Software Engineer = Code doesnt break existing functionality, Bug-free, satisfies requirements as given
+for Project Manager = ensuring that a specific piece of software works with other parts of system
+for UX designer = website looks and behaves as expected
