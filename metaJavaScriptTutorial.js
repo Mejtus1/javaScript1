@@ -998,3 +998,20 @@ unit = smallest piece of code that you can test separetely from the rest of the 
 for Software Engineer = Code doesnt break existing functionality, Bug-free, satisfies requirements as given
 for Project Manager = ensuring that a specific piece of software works with other parts of system
 for UX designer = website looks and behaves as expected
+
+
+Jest
+Javascript has no testing functionality build-in 
+That is why we can use Jest
+- also supports testing of other frameworks: Vue, Angular, TypeScript, Node...
+- measures what % of code is covered by tests
+- usually the higher is code coverage < time to cover for code tests
+- In-build mocking functions, facilitates asynchronous code, snapshot-testing 
+
+Snapshot testing
+- used by web developers to verify that there are no regressions in the DOM 
+
+Mocking 
+- allows the code that we are testing from our related dependencies 
+- example: testing the frond end of a server, by MOCKING the data as if they came
+from web server(in fact it came from the client)
