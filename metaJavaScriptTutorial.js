@@ -1015,3 +1015,13 @@ Mocking
 - allows the code that we are testing from our related dependencies 
 - example: testing the frond end of a server, by MOCKING the data as if they came
 from web server(in fact it came from the client)
+
+
+TDD - Test Driven Development 
+- streamlined process of writing code that will satisfy some requirements
+
+benefits following the TDD approach:
+- Minimize regressions
+- Implementations can be tested using various inputs
+- Run your infrastructure more efficiently)
+
